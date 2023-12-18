@@ -1,0 +1,25 @@
+{
+  "name": "londrike-steampunk",
+  "version": "1.0.0",
+  "description": "Londrike-Steampunk system for tabletop RPG",
+  "scripts": {
+    "build": "gulp build",
+    "compile": "gulp css",
+    "watch": "gulp",
+    "gulp": "gulp"
+  },
+  "browserslist": [
+    "last 3 versions"
+  ],
+  "author": "",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "@league-of-foundry-developers/foundry-vtt-types": "^9.280.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "sass": "^1.53.0"
+  }
+}

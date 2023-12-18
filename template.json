@@ -1,0 +1,131 @@
+{
+  "Actor": {
+    "types": ["hero", "pawn", "merchant"],
+    "base": {
+      "name": [],
+      "information": ""
+    },
+    "templates": {
+      "background": {
+        "firstname": "",
+        "lastname": "",
+        "nickname": "",
+        "age": "",
+        "gender": "",
+        "description": "",
+        "story": "",
+        "motivation": ""
+      },
+      "resources": {
+        "health": {
+          "min": 0,
+          "value": "",
+          "max": ""
+        },
+        "power": {
+          "min": 0,
+          "value": "",
+          "max": ""
+        }
+      },
+      "stats": {
+        "agility": "",
+        "cook": "",
+        "constitution": "",
+        "mechanic": "",
+        "etincellism": "",
+        "explosive": "",
+        "guns": "",
+        "luck": "",
+        "medicine": "",
+        "melee": "",
+        "mental": "",
+        "science": "",
+        "speech": "",
+        "stealth": "",
+        "vision": ""
+      }
+    },
+    "hero": {
+      "templates": ["background", "childhood", "career", "origin", "resources", "stats"],
+      "traits": [],
+      "hunger": {
+        "min": 0,
+        "value": "",
+        "max": ""
+      },
+      "override": {
+        "min": 0,
+        "value": "",
+        "max": ""
+      }
+    },
+    "pawn": {
+      "templates": ["base", "resources", "stats"]
+    },
+    "merchant": {
+      "templates": ["base", "resources"],
+      "stock": []
+    }
+  },
+  "Item": {
+    "types": ["childhood", "career", "trait", "origin", "skill", "weapon", "armor", "util", "effect"],
+    "templates": {
+      "base": {
+        "name": "",
+        "description": ""
+      },
+      "rarity":  {
+        "value": ["common", "rare", "epic", "legendary"]
+      },
+      "target_type": {
+        "value": ["one", "multiple"]
+      }
+    },
+    "childhood": {
+      "templates": ["base"],
+      "effects": []
+    },
+    "career": {
+      "templates": ["base"],
+      "effects": []
+    },
+    "trait": {
+      "templates": ["base"],
+      "effects": []
+    },
+    "origin": {
+      "templates": ["base"],
+      "effects": []
+    },
+    "skill": {
+      "templates": ["base", "target_type"],
+      "effects": [],
+      "damage": "",
+      "heal": "",
+      "reload_time": ""
+    },
+    "weapon": {
+      "templates": ["base", "rarity", "target_type"],
+      "damage": "",
+      "cost": ""
+    },
+    "armor": {
+      "templates": ["base", "rarity"],
+      "armor": "",
+      "cost": ""
+    },
+    "util": {
+      "templates": ["base", "rarity", "target_type"],
+      "cost": "",
+      "damage": "",
+      "heal": "",
+      "effect": []
+    },
+    "effect": {
+      "templates": ["base"],
+      "stat": "",
+      "value": ""
+    }
+  }
+}

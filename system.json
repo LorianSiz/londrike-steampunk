@@ -1,0 +1,35 @@
+{
+    "id": "londrike-steampunk",
+    "name": "londrike-steampunk",
+    "title": "Londrike Steampunk System",
+    "description": "Système de jeu pour jdr steampunk personnalisée.",
+    "version": "1.0.0",
+    "authors": [
+        {
+            "name": "MajorAeon"
+        }
+    ],
+    "scripts": [
+        "scripts/system-script.js"
+    ],
+    "esmodules": [
+        "module/londrike-steampunk.mjs"
+    ],
+    "styles": [
+        "css/londrike-steampunk.css"
+    ],
+    "languages": [
+        {
+            "lang": "en",
+            "name": "English",
+            "path": "lang/en.json"
+        },
+        {
+            "lang": "fr",
+            "name": "Français",
+            "path": "lang/fr.json"
+        }
+    ],
+    "primaryTokenAttribute": "health",
+    "secondaryTokenAttribute": "power"
+}

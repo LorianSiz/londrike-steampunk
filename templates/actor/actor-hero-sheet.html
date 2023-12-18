@@ -1,0 +1,72 @@
+<form class="{{cssClass}} {{actor.type}} flexcol" autocomplete="off">
+
+  <header class="sheet-header">
+    <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100"/>
+    <div class="header-fields">
+      <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h1>
+      <div class="resources grid grid-4col">
+
+        <div class="resource flex-group-center">
+          <label for="system.health.value" class="resource-label">Health</label>
+          <div>barre de vie</div>
+          <div class="resource-content flexrow flex-center flex-between">
+            <input type="text" name="system.health.value" value="{{system.health.value}}" data-dtype="Number"/>
+            <span> / </span>
+            <input type="text" name="system.health.max" value="{{system.health.max}}" data-dtype="Number"/>
+          </div>
+        </div>
+
+        <div class="resource flex-group-center">
+          <label for="system.power.value" class="resource-label">Power</label>
+          <div>barre de puissance</div>
+          <div class="resource-content flexrow flex-center flex-between">
+            <input type="text" name="system.power.value" value="{{system.power.value}}" data-dtype="Number"/>
+            <span> / </span>
+            <input type="text" name="system.power.max" value="{{system.power.max}}" data-dtype="Number"/>
+          </div>
+        </div>
+
+        <div class="resource flex-group-center">
+          <label for="system.hunger.value" class="resource-label">Hunger</label>
+          <div>barre de faim</div>
+          <div class="resource-content flexrow flex-center flex-between">
+            <input type="text" name="system.hunger.value" value="{{system.hunger.value}}" data-dtype="Number"/>
+            <span> / </span>
+            <input type="text" name="system.hunger.max" value="{{system.hunger.max}}" data-dtype="Number"/>
+          </div>
+        </div>
+
+        <div class="resource flex-group-center">
+          <label for="system.attributes.level.value" class="resource-label">Story Points</label>
+          <div class="resource-content flexrow flex-center flex-between">
+            <input type="text" name="system.attributes.level.value" value="{{system.attributes.level.value}}" data-dtype="Number"/>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <section style="display: flex">
+    <section class="custom-col" style="width:90%">
+      <nav class="sheet-tabs tabs" data-group="primary">
+        <a class="item" data-tab="biography">Biography</a>
+        <a class="item" data-tab="statistics">Statistics</a>
+        <a class="item" data-tab="inventory">Inventory</a>
+        <a class="item" data-tab="skills">Skills</a>
+        <a class="item" data-tab="augmentations">Augmentations</a>
+        <a class="item" data-tab="effects">Effects</a>
+      </nav>
+
+      <section class="sheet-body">
+        <div class="tab biography" data-group="primary" data-tab="biography">
+          {{> "systems/londrike-steampunk/templates/actor/parts/actor-biography.html"}}
+        </div>
+      </section>
+    </section>
+    <section class="custom-col" style="width:10%; border-left: rgb(181, 179, 164) solid 1px; border-top: rgb(181, 179, 164) solid 1px; margin: 4px 0">
+      overdrive
+    </section>
+  </section>
+
+</form>

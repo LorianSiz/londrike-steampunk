@@ -109,7 +109,9 @@ async function createItemMacro(data, slot) {
       type: "script",
       img: item.img,
       command: command,
-      flags: { "londrikesteampunk.itemMacro": true }
+      flags: { 
+        "londrikesteampunk.itemMacro": true
+      }
     });
   }
   game.user.assignHotbarMacro(macro, slot);

@@ -31,5 +31,11 @@
         }
     ],
     "primaryTokenAttribute": "health",
-    "secondaryTokenAttribute": "power"
+    "secondaryTokenAttribute": "power",
+    "flags": {
+        "hotReload": {
+          "extensions": ["css", "hbs", "json", "html"],
+          "paths": ["css", "templates", "lang"]
+        }
+    }
 }

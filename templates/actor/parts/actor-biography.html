@@ -1,60 +1,104 @@
 <div class="biography">
-  <div class="biography-col3">
-    <label>
+  <div class="biography-col4">
+    <label class="col-horizontal">
       <input name="nickname" type="text" value="{{actor.nickname}}" placeholder="Title / Nickname"/>
     </label>
-    <label>
+    <label class="col-horizontal">
       <input name="lastname" type="text" value="{{actor.lastname}}" placeholder="Lastname"/>
     </label>
-    <label>
+    <label class="col-horizontal">
       <input name="firstname" type="text" value="{{actor.firstname}}" placeholder="Firstname"/>
     </label>
+    <div class="royal-wax-container">
+      <img src="/systems/londrike-steampunk/assets/images/royal_wax_seal.png" class="royal-wax-img"/>
+    </div>
   </div>
 
-  <div class="biography-col2-1">
-    <label>
-      <input name="age" type="text" value="{{actor.age}}" placeholder="Age"/>
+  <div class="bracket-container">
+
+  </div>
+
+  <div class="biography-col2">
+    <label class="col-horizontal">
+      <p>Birth date :</p>
+      <input id="birth-day" type="number" name="birth-day" min="1" max="31" value="1"/>
+      <select id="birth-month" name="birth-month">
+        <option value="january">January</option>
+        <option value="february">February</option>
+        <option value="march">March</option>
+        <option value="april">April</option>
+        <option value="may">May</option>
+        <option value="june">June</option>
+        <option value="july">July</option>
+        <option value="august">August</option>
+        <option value="september">September</option>
+        <option value="october">October</option>
+        <option value="november">November</option>
+        <option value="december">December</option>
+      </select>
+      <p style="margin-right: 10px">,AF</p>
+      <input id="birth-year" type="number" name="birth-year" min="-400" max="105" value="100"/>
+      <p>; AGE AUTO years old</p>
     </label>
-    <label>
-      <input name="gender" type="text" value="{{actor.gender}}" placeholder="Gender"/>
+    <label class="col-horizontal">
+      <select id="gender-input" name="gender">
+        <option value="man">Gentleman</option>
+        <option value="women">Lady</option>
+        <option value="machine">Machine</option>
+        <option value="etincelor">Etincelor</option>
+      </select>
     </label>
   </div>
 
   <div class="biography-col3">
-    <label>
-      <input name="origin" type="text" value="{{actor.origin}}" placeholder="Origin"/>
-    </label>
-    <label>
-      <input name="career" type="text" value="{{actor.career}}" placeholder="Career"/>
-    </label>
-    <label>
-      <input name="childhood" type="text" value="{{actor.childhood}}" placeholder="Childhood"/>
-    </label>
+    <div class="col-vertical">
+      <p>Origin :</p>
+      <div id="origin-drop" class="drop-div"></div>
+    </div>
+    <div class="col-vertical">
+      <p>Childhood :</p>
+      <div id="childhood-drop" class="drop-div"></div>
+    </div>
+    <div class="col-vertical">
+      <p>Career :</p>
+      <div id="career-drop" class="drop-div"></div>
+    </div>
   </div>
 
-
-  <div class="biography-col2-2">
-    <label>
-      Description :
-      <textarea name="description">{{actor.description}}</textarea>
-    </label>
-    <label>
-      Story :
-      <textarea name="story">{{actor.story}}</textarea>
-    </label>
+  <div class="biography-col2-bis">
+    <div class="col-vertical">
+      <label for="physical-desc-text" class="label-textarea">Description :</label>
+      <textarea id="physical-desc-text" name="physical_description">{{actor.description}}</textarea>
+    </div>
+    <div class="col-vertical">
+      <label for="story-text" class="label-textarea">Story :</label>
+      <textarea id="story-text" name="story-text">{{actor.story}}</textarea>
+    </div>
   </div>
 
-  <div>
-    <label>
-      Traits :
-      <input name="traits" type="text" value="{{actor.traits}}"/>
-    </label>
+  <div class="biography-col1">
+    <div class="col-vertical">
+      <label for="motivation-text" class="label-textarea">Motivation :</label>
+      <textarea id="motivation-text" name="motivation-text">{{actor.motivation}}</textarea>
+    </div>
   </div>
 
-  <div>
-    <label>
-      Motivation :
-      <textarea name="motivation">{{actor.motivation}}</textarea>
-    </label>
+  <div class="biography-col2-bis-2">
+    <div class="col-vertical">
+      <p class="label-traits">Virtues</p>
+      <ul>
+        <li><div class="drop-div-traits"></div></li>
+        <li><div class="drop-div-traits"></div></li>
+        <li><div class="drop-div-traits"></div></li>
+      </ul>
+    </div>
+    <div class="col-vertical">
+      <p class="label-traits">Defaults</p>
+      <ul>
+        <li><div class="drop-div-traits"></div></li>
+        <li><div class="drop-div-traits"></div></li>
+        <li><div class="drop-div-traits"></div></li>
+      </ul>
+    </div>
   </div>
 </div>

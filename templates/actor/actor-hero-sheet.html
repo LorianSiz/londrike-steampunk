@@ -5,61 +5,82 @@
       <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100"/>
       <img class="frame-image" src="/systems/londrike-steampunk/assets/images/profile_frame.png"/>
     </div>
-    <div class="header-fields">
-      <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h1>
-      <div class="resources grid grid-4col">
+    <div class="header-content">
+      <img src="/systems/londrike-steampunk/assets/images/nixie.png" class="nixie-img"/>
+      <div class="header-fields">
+        <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h1>
+        <div class="resources grid grid-4col">
 
-        <div class="resource flex-group-center">
-          <label for="system.health.value" class="resource-label">Health</label>
-          <div>barre de vie</div>
-          <div class="resource-content flexrow flex-center flex-between">
-            <input type="text" name="system.health.value" value="{{system.health.value}}" data-dtype="Number"/>
-            <span> / </span>
-            <input type="text" name="system.health.max" value="{{system.health.max}}" data-dtype="Number"/>
+          <div class="resource flex-group-center">
+            <label for="system.health.value" class="resource-label">Health</label>
+            <div>barre de vie</div>
+            <div class="resource-content flexrow flex-center flex-between">
+              <input type="text" name="system.health.value" value="{{system.health.value}}" data-dtype="Number"/>
+              <span> / </span>
+              <input type="text" name="system.health.max" value="{{system.health.max}}" data-dtype="Number"/>
+            </div>
           </div>
-        </div>
 
-        <div class="resource flex-group-center">
-          <label for="system.power.value" class="resource-label">Power</label>
-          <div>barre de puissance</div>
-          <div class="resource-content flexrow flex-center flex-between">
-            <input type="text" name="system.power.value" value="{{system.power.value}}" data-dtype="Number"/>
-            <span> / </span>
-            <input type="text" name="system.power.max" value="{{system.power.max}}" data-dtype="Number"/>
+          <div class="resource flex-group-center">
+            <label for="system.power.value" class="resource-label">Power</label>
+            <div>barre de puissance</div>
+            <div class="resource-content flexrow flex-center flex-between">
+              <input type="text" name="system.power.value" value="{{system.power.value}}" data-dtype="Number"/>
+              <span> / </span>
+              <input type="text" name="system.power.max" value="{{system.power.max}}" data-dtype="Number"/>
+            </div>
           </div>
-        </div>
 
-        <div class="resource flex-group-center">
-          <label for="system.hunger.value" class="resource-label">Hunger</label>
-          <div>barre de faim</div>
-          <div class="resource-content flexrow flex-center flex-between">
-            <input type="text" name="system.hunger.value" value="{{system.hunger.value}}" data-dtype="Number"/>
-            <span> / </span>
-            <input type="text" name="system.hunger.max" value="{{system.hunger.max}}" data-dtype="Number"/>
+          <div class="resource flex-group-center">
+            <label for="system.hunger.value" class="resource-label">Hunger</label>
+            <div>barre de faim</div>
+            <div class="resource-content flexrow flex-center flex-between">
+              <input type="text" name="system.hunger.value" value="{{system.hunger.value}}" data-dtype="Number"/>
+              <span> / </span>
+              <input type="text" name="system.hunger.max" value="{{system.hunger.max}}" data-dtype="Number"/>
+            </div>
           </div>
-        </div>
 
-        <div class="resource flex-group-center">
-          <label for="system.attributes.level.value" class="resource-label">Story Points</label>
-          <div class="resource-content flexrow flex-center flex-between">
-            <input type="text" name="system.attributes.level.value" value="{{system.attributes.level.value}}" data-dtype="Number"/>
+          <div class="resource flex-group-center">
+            <label for="system.attributes.level.value" class="resource-label">Story Points</label>
+            <div class="resource-content flexrow flex-center flex-between">
+              <input type="text" name="system.attributes.level.value" value="{{system.attributes.level.value}}" data-dtype="Number"/>
+            </div>
           </div>
-        </div>
 
+        </div>
       </div>
+      <img src="/systems/londrike-steampunk/assets/images/nixie.png" class="nixie-img"/>
     </div>
   </header>
 
-  <section style="display: flex">
+  <section class="sheet-main">
     <section class="custom-col" style="width:90%">
-      <nav class="sheet-tabs tabs" data-group="primary" style="margin: 0; border: none;">
-        <a class="item" data-tab="biography"style="width: 16%;">Biography</a>
-        <a class="item" data-tab="statistics"style="width: 16%;">Statistics</a>
-        <a class="item" data-tab="inventory"style="width: 16%;">Inventory</a>
-        <a class="item" data-tab="skills"style="width: 16%;">Skills</a>
-        <a class="item" data-tab="augmentations"style="width: 16%;">Augmentations</a>
-        <a class="item" data-tab="effects"style="width: 16%;">Effects</a>
-      </nav>
+      <div class="nav-container">
+        <img src="/systems/londrike-steampunk/assets/images/gold_gear_left.png" class="gold-gear-img "/>
+        <nav class="sheet-tabs tabs" data-group="primary" style="margin: 0; border: none; flex-grow: 1;">
+          <div class="item item-nav item-left item-active">
+            <a data-tab="biography">Biography</a>
+          </div>
+          <div class="item item-nav" >
+            <a data-tab="statistics">Statistics</a>
+          </div>
+          <div class="item item-nav" >
+            <a data-tab="inventory">Inventory</a>
+          </div>
+          <div class="item item-nav" >
+            <a data-tab="skills">Skills</a>
+          </div>
+          <div class="item item-nav" >
+            <a data-tab="augmentations">Augmentations</a>
+          </div>
+          <div class="item item-nav item-right" >
+            <a data-tab="effects">Effects</a>
+          </div>
+        </nav>
+        <img src="/systems/londrike-steampunk/assets/images/gold_gear_right.png" class="gold-gear-img "/>
+      </div>
+
 
       <section class="sheet-body">
         <div class="tab biography" data-group="primary" data-tab="biography">
@@ -67,7 +88,7 @@
         </div>
       </section>
     </section>
-    <section class="custom-col overdrive" style="width:10%; border-left: rgb(181, 179, 164) solid 1px; border-top: rgb(181, 179, 164) solid 1px">
+    <section class="custom-col overdrive-container">
       overdrive
     </section>
   </section>

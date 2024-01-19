@@ -9,12 +9,14 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
+  border: solid 5px #b49d6c;
 
   .profile-img-container {
     flex: 0 0 134px;
     height: 100%;
     position: relative;
     background: url(../assets/images/frame_background.png);
+    border-right: 3px solid #806d46;
   }
 
   .profile-img {
@@ -32,15 +34,27 @@
     object-fit: cover;
   }
 
-  .header-fields {
-    flex: 1;
+  .header-content {
     background: url(../assets/images/wooden_frame.png);
     background-size: cover;
+    display: flex;
+  }
+
+  .nixie-img {
+    height: 135px;
+    width: 95px;
+    border: none;
+  }
+
+  .header-fields {
+    flex-grow: 1;
+    padding-right: 25px;
+    padding-left: 25px;
   }
 
   h1.charname {
     height: 50px;
-    padding: 0px;
+    padding: 0;
     margin: 5px 0;
     border-bottom: 0;
     input {
@@ -51,24 +65,85 @@
   }
 }
 
+.gold-gear-img {
+  border:none;
+  height: 40px;
+  width: 20px;
+}
+
+.royal-wax-img {
+  border:none;
+  height: 130px;
+  width: 130px;
+}
+
+.bracket-container {
+  width: 100%;
+  height: 100px;
+}
+
+.bracket-img {
+}
+
+.sheet-main {
+  display: flex;
+}
+
+.nav-container {
+  background-image: url(../assets/images/dark_brown_plank.png);
+  background-size: contain;
+  background-repeat: repeat;
+  padding: 5px 10px 5px 10px;
+  display: flex;
+  align-items: center;
+  border-bottom: 3px solid #706e68;
+}
+
 .sheet-tabs {
   flex: 0;
   height: 6%;
   box-sizing: border-box;
-  background-color: black;
-}
+  background: url(../assets/images/noise_gold.png);
+  background-color: #d19b2e;
+  padding: 5px;
+  border-radius: 8px;
 
-.sheet-tabs a {
-  background: url(../assets/images/rusted_gold.png);
-  background-size: cover;
-  color: white;
+  .item-nav {
+    width: 17%;
+    margin-left: 3px;
+    color: white;
+    background-color: #7B5F31;
+    box-shadow:inset 0 0 5px black, inset 0 0 0 1000px #7B5F31;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+
+  .item-left {
+    border-bottom-left-radius: 8px;
+    border-top-left-radius: 8px;
+    margin-left: 0;
+  }
+
+  .item-right {
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+
+  .item-active {
+    border: 3px groove #96743c;
+    box-shadow: 0 0 3px black;
+  }
 }
 
 .sheet-body {
-  background: url(../assets/images/old_paper.jpg);
+  width: 1145px;
+  height: 550px;
+  overflow: auto;
+  background: url(../assets/images/old_paper.jpg) local;
   background-size: cover;
-  height: 94%;
   box-sizing: border-box;
+  box-shadow:inset 0 3px 10px black;
 }
 
 .tox {
@@ -88,55 +163,150 @@
   overflow: hidden;
 }
 
-.overdrive {
+.overdrive-container {
   background: url(../assets/images/metal_with_rivets.png);
   background-size: cover;
   background-position: center;
-  border-radius: 10px;
-}
-
-.input-drop {
-  border: 3px solid darkred;
-  height: 80px;
-  width: 80px;
-  border-radius: 5px;
-  display: block;
-  float: left;
-  margin: 10px 0 0 10px;
-  background: url(../assets/images/red_wax.png);
-  background-size: contain;
+  border-left: 3px solid #706E68FF;
+  width:10%
 }
 
 .biography {
   height: 100%;
   width: 100%;
-  border: 2px solid #522f07;
-  border-radius: 10px;
+  font-family: 'Brush Script MT', cursive;
+  font-size: 1.3em;
 }
 
-.biography label {
+.biography .royal-wax-container {
   display: flex;
-  float: left;
-  align-content: center;
+  align-items: flex-start;
   justify-content: center;
-  align-items: center;
+  height: 150px;
 }
 
-.biography-col2-1 label {
-  width: 50%;
-  padding: 30px 60px 0 60px;
+.biography .biography-col1 {
+  padding: 50px 70px 0 70px;
 }
 
-.biography-col2-2 label {
-  width: 50%;
+.biography-col2 {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  gap: 10px;
+  padding: 50px 30px 0 30px;
+}
+
+.biography-col2-bis {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+  padding: 50px 70px 0 70px;
+}
+
+.biography-col2-bis-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 250px;
+  border: solid 5px #8a5404;
+  border-radius: 70px;
+  margin: 50px 50px 0 50px;
+  padding: 10px 20px 0 20px;
+}
+
+.biography-col3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
   padding: 30px 30px 0 30px;
 }
 
-.biography-col3 label {
-  width: 33%;
-  padding: 30px 40px 0 40px;
+.biography .col-horizontal {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.biography .col-vertical {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.biography textarea {
+  font-family: 'Brush Script MT', cursive;
+  font-size: 1em;
+  text-align: justify;
+  height: 250px;
+}
+
+.biography .label-textarea {
+  align-self: flex-start;
+}
+
+.biography .label-traits {
+  align-self: flex-start;
+  margin-left: 50px
+}
+
+.biography-col4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 20px 0 0 100px;
 }
 
 .biography input {
   border-width: 0 0 1px 0;
+  width: 250px;
+}
+
+.biography select {
+  border-width: 0 0 1px 0;
+  width: 250px;
+  text-align: center;
+}
+
+.biography .drop-div {
+  height: 100px;
+  width: 100px;
+  border: solid 5px #ad7b05;
+  box-shadow: 6px 8px 8px rgba(0, 0, 0, 0.5), inset 0 0 10px black;
+  background: url(../assets/images/victorian_textile_background.png);
+  background-size: cover;
+}
+
+.biography .drop-div-traits {
+  height: 50px;
+  width: 250px;
+  border: solid 5px #ad7b05;
+  box-shadow: 6px 8px 8px rgba(0, 0, 0, 0.5), inset 0 0 10px black;
+  background: url(../assets/images/victorian_textile_background.png);
+  background-size: cover;
+  margin-bottom: 10px;
+}
+
+.biography ul {
+  list-style-type: square;
+}
+
+#birth-day {
+  width: 50px;
+}
+
+#birth-month {
+  width: 150px;
+}
+
+#birth-year {
+  width: 80px;
+}
+
+#gender-input {
+  width: 150px
+}
+
+#motivation-text {
+  height: 100px;
 }
